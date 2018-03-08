@@ -1,0 +1,21 @@
+<header role="banner" class="header">
+  <section class="container">
+    <img class="header__logo" src="/img/correctiv_logo.svg" />
+    <nav role="navigation" class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__list-item">
+          <a class="navigation__link navigation__link--index" href="/"> / </a>
+        </li>
+        {% for page_item in site.pages %}
+        {% if page_item.title and page_item.show_menu %}
+        <li class="navigation__list-item {% if page.title != page_item.title %}navigation__list-item--active{% endif %}">
+          <a class="navigation__link {% if page.title != page_item.title %}navigation__list-item--active{% endif %}" href="{{ page_item.url | prepend: full_base_url }}">
+            {{ page_item.menu_title | default: page_item.title | escape }}
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </section>
+</header>

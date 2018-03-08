@@ -1,0 +1,15 @@
+.container {
+  display: block;
+  margin: 0 auto;
+
+  width: 95%;
+  @include bp-sm {
+    width: 90%;
+  }
+  @include bp-md {
+    width: 800px;
+  }
+  @include bp-lg {
+    width: 1000px;
+  }
+}

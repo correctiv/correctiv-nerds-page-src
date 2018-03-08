@@ -1,0 +1,14 @@
+.header {
+
+  display: block;
+  width: 100%;
+  background-color: $gray-light;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
+
+  &__logo {
+    display: block;
+    width: 150px;
+  }
+
+}

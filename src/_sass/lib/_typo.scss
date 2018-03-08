@@ -1,0 +1,66 @@
+$neuzeit-font-path: 'https://correctiv.org/static/fonts/neuzeit_grotesk_bold/neuzeitgro-bol-webfont';
+$neuzeit-condensed-font-path: 'https://correctiv.org/static/fonts/neuzeit_grotesk_black_condensed/neuzeitgroext-bla-webfont';
+$neuzeit-regular-font-path: 'https://correctiv.org/static/fonts/neuzeit_grotesk_regular/neuzeitgro-reg-webfont';
+
+@font-face {
+  font-family: 'Neuzeit';
+  src: url('#{$neuzeit-font-path}.eot');
+  src: url('#{$neuzeit-font-path}.eot?#iefix') format('embedded-opentype'),
+       url('#{$neuzeit-font-path}.woff2') format('woff2'),
+       url('#{$neuzeit-font-path}.woff') format('woff'),
+       url('#{$neuzeit-font-path}.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neuzeit';
+  src: url('#{$neuzeit-regular-font-path}.eot');
+  src: url('#{$neuzeit-regular-font-path}.eot?#iefix') format('embedded-opentype'),
+       url('#{$neuzeit-regular-font-path}.woff2') format('woff2'),
+       url('#{$neuzeit-regular-font-path}.woff') format('woff'),
+       url('#{$neuzeit-regular-font-path}.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neuzeit-Condensed';
+  src: url('#{$neuzeit-condensed-font-path}.eot');
+  src: url('#{$neuzeit-condensed-font-path}.eot?#iefix') format('embedded-opentype'),
+       url('#{$neuzeit-condensed-font-path}.woff2') format('woff2'),
+       url('#{$neuzeit-condensed-font-path}.woff') format('woff'),
+       url('#{$neuzeit-condensed-font-path}.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin heading-font-primary() {
+  font-family: 'Neuzeit', 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: none;
+}
+
+@mixin heading-font-secondary() {
+  font-family: 'Neuzeit-Condensed', 'Arial Narrow', 'Franklin Gothic Medium', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+// FIXME
+body {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-family: 'Neuzeit';
+}
+
+h1 {
+  @include heading-font-primary;
+}
+
+h2 {
+  @include heading-font-secondary;
+  font-size: 1.8em;
+}
